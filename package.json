@@ -1,0 +1,26 @@
+{
+  "name": "infra-forge",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Smart Contract Development Platform for INFRA Group",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "start": "turbo run start",
+    "lint": "turbo run lint",
+    "clean": "turbo run clean",
+    "web": "cd apps/web && npm run dev",
+    "api": "cd apps/api && uvicorn app.main:app --reload"
+  },
+  "devDependencies": {
+    "turbo": "^2.3.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  }
+}
